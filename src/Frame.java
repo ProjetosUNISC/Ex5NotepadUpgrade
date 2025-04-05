@@ -10,41 +10,6 @@ import java.awt.event.KeyListener;
 public class Frame extends JFrame implements ActionListener {
 
 
-    /**
-     * NÃO FUNCIONOU, DESISTO
-     */
-  /*   private KeyListener keyListener = new KeyListener() {
-        @Override
-        public void keyTyped(KeyEvent e) {
-
-        }
-
-        @Override
-        public void keyPressed(KeyEvent e) {
-            // Ctrl+F foi apertado
-            if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_F) {
-                //abrir mensagem na tela
-                JOptionPane.showMessageDialog(Frame.this, "Criação cancelada.");
-                Procura procura = new Procura();
-            }
-            if(KeyEvent.VK_J==e.getKeyCode()){
-                JOptionPane.showMessageDialog(Frame.this, "Criação cancelada.");
-            }
-        }
-
-        @Override
-        public void keyReleased(KeyEvent e) {
-            //
-            if (e.isControlDown() && e.getKeyCode() == KeyEvent.VK_F) {
-                JOptionPane.showMessageDialog(Frame.this, "Criação cancelada.");
-                Procura procura = new Procura();
-            }
-
-            if(KeyEvent.VK_J==e.getKeyCode()){
-                JOptionPane.showMessageDialog(Frame.this, "Criação cancelada.");
-            }
-        }
-    };*/
 
     private JPanel painelCentral = new JPanel();
     private BorderLayout estiloPainelCentral = new BorderLayout();
@@ -68,9 +33,6 @@ public class Frame extends JFrame implements ActionListener {
         super("Exercicio 4, BLOCO DE NOTAS FALSO");
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
-
-        //comandos do teclado
-        //this.addKeyListener(keyListener); //LARGUEI GURIZADA
 
 
         //ESTILO PAINEL PRINCIPAL
