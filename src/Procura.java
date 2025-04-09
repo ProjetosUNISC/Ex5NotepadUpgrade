@@ -68,6 +68,8 @@ public class Procura extends JDialog {
         setSize(300, 150);
         setLocationRelativeTo(parent);
         setVisible(true);
+
+        this.getRootPane().setDefaultButton(btnOK);
     }
 
     private void encontrarTexto() {
