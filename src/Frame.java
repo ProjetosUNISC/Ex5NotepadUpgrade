@@ -11,6 +11,19 @@ public class Frame extends JFrame {
     private JTextField txtLinha = new JTextField();
     private Procura janelaLocaliza = null;
 
+    ///BARRA MENU
+    private JMenuBar barraMenu = new JMenuBar();
+
+    //ARQUIVO OPÇÕES
+    private JMenu Arquivo = new JMenu("Arquivo");
+    private JMenuItem abrir = new JMenuItem("Abrir");
+    private JMenuItem salvar = new JMenuItem("Salvar");
+
+    //EDITAR OPÇÕES
+    private JMenu editar = new JMenu("Editar");
+
+
+
 
 
 
@@ -25,6 +38,21 @@ public class Frame extends JFrame {
         //config da janela
         this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         this.setLocationRelativeTo(null);
+
+
+
+        //MENU
+        this.setJMenuBar(barraMenu);
+
+
+        barraMenu.add(Arquivo);
+        barraMenu.add(editar);
+
+        Arquivo.add(abrir);
+        Arquivo.add(salvar);
+
+        abrir.addActionListener((e) -> {abrirArquivo();});
+        salvar.addActionListener((e) -> {salvarTexto();});
 
         //painel principal
         JPanel painelCentral = new JPanel(new BorderLayout());
